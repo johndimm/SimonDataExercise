@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Mail Merge -- jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+    <div id="titleBar">
+        <div id="pageTitle">
+          Mail Merge
+        </div>
+        <i>using jQuery and PHP</i>
+    </div>
+
+    <div class="step">
+        <div class="title">
+          1.  Create an email template
+        </div>
+
+        <textarea id="template" rows="8" cols="80"></textarea>
+
+<pre>
+Example:
+<i>
+Hi %%contact_first_name%%,
+
+Get %%discount_rate%% off your next purchase using this discount code:
+    %%discount_code%%.
+</i>
+</pre>
+
+        <button onclick="javascript:processTemplate()">process template</button>
+    </div>
+
+    <div class="step">
+        <div class="title">
+          2. Supply values for the variables
+        </div>
+        <div id="templateFields"></div>
+        <button onclick="javascript:renderTemplate()">preview email message</button>
+    </div>
+
+    <div class="step">
+        <div class="title">
+          3. Send it
+        </div>
+
+        <div>
+            From: <input id="from" size="20"  />
+            <br>
+            To: <input id="to" size="20"  />
+        </div>
+
+        <pre><div id="message"></div></pre>
+
+        <button onclick="javascript:sendMail()">send mail</button>
+
+        <div id="sendgrid_response"></div>
+        <div id="sendgrid_data"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+jquery 
+  - server: php
+  - client: jquery, template rendering by regex
+
+react
+  - server:  python, template rendering jinja2 in a cgi-bin python script
+  - client: jquery, react 
+
+node
+  -- nodejs, express, handlebars 
